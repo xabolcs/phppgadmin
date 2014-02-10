@@ -527,7 +527,7 @@
 
 		if (is_object($rs) && $rs->recordCount() > 0) {
 			// Show page navigation
-			$misc->printPages($_REQUEST['page'], $max_pages, $_gets);
+			$misc->printPages($_REQUEST['page'], $max_pages, $_gets, 'display.php');
 
 			echo "<table id=\"data\">\n<tr>";
 
@@ -653,7 +653,7 @@
 
 			echo "<p>", $rs->recordCount(), " {$lang['strrows']}</p>\n";
 			// Show page navigation
-			$misc->printPages($_REQUEST['page'], $max_pages, $_gets);
+			$misc->printPages($_REQUEST['page'], $max_pages, $_gets, 'display.php');
 		}
 		else echo "<p>{$lang['strnodata']}</p>\n";
 
